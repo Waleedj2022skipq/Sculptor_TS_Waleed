@@ -2,7 +2,7 @@
 
 ## Fasten your sear belt!
 
-**In order to run the code files properly, one must fist configure these pre-reqs properly**
+**In order to run the code files properly, one must first configure these pre-reqs properly**
 
 Following items are mandatory in case of using a WSL (Ubuntu >= 20.4) Image.
   1. Node Verson Manager (NVM) [Latest Preferred]()
@@ -13,7 +13,7 @@ Following items are mandatory in case of using a WSL (Ubuntu >= 20.4) Image.
   6. Basic knowledge of Git & GitHub
   7. A good IDE [Preferred: VS-Code]()
 
-## Initiating Laucnh Sequence!
+## Initiating Launch Sequence!
 
 
 
