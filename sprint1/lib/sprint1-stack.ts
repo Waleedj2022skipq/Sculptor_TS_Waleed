@@ -1,16 +1,17 @@
-import { Stack, StackProps } from 'aws-cdk-lib';
-import { Construct } from 'constructs';
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
+import * as cdk from 'aws-cdk-lib';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
 
-export class Sprint1Stack extends Stack {
-  constructor(scope: Construct, id: string, props?: StackProps) {
+export class Sprint1Stack extends cdk.Stack {
+  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    // The code that defines your stack goes here
-
-    // example resource
-    // const queue = new sqs.Queue(this, 'Sprint1Queue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
+    //defining a aws lambda resource
+    const helloWolrdLambda = new lambda.Function(this,
+      "WaleedJaved_Skipq2022_Handler_HelloWorld", // Function name to be displayed on the console
+      {
+      runtime : lambda.Runtime.NODEJS_14_X, // runtime for the code env
+      code: lambda.Code.fromAsset('lambda'), // code loaded from lambda directory
+      handler: 'helloLambda.handlerResponse' // file is "helloLambda", functions is "handlerResponse"
+    });
   }
 }
